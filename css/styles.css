@@ -1,0 +1,152 @@
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+*:not(body):not(html) {
+  box-sizing:border-box;
+  border:1px dashed #000;
+}
+
+.columns {
+  min-height: 100px !important;
+}
+
+#container {
+  /*align-items: center;*/
+  margin: 0 auto;
+  width: 98%;
+  height: 100vh;
+}
+
+#image {
+  background-image: url("../img/hotel.jpg");
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#main-content {
+  height: 400px;
+  width: 100%;
+  overflow: hidden;
+}
+
+#column1 {
+  height: 300px;
+}
+
+#column2 {
+  height: 300px;
+}
+
+#icon {
+  display: none;
+}
+
+/*** Media Queries ***/
+
+@media screen and (min-width:570px) {
+  #column2 {
+    float: right;
+    height:50%;
+    width: 49%;
+    background-color: #000;
+    margin-top: 10px;
+    color: #fff;
+  }
+
+  #column1 {
+    float: left;
+    height: 50%;
+    width: 49%;
+    background-color: #000;
+    color: #fff;
+    margin-top: 10px;
+  }
+
+  #image {
+    width: 100%;
+    height: 100%;
+
+  }
+
+  #main-content {
+    height: 49%;
+    position: relative;
+  }
+
+#main-content h3 {
+  position: absolute;
+  top: 82%;
+  left: 5%;
+}
+
+  header {
+    display: inline-block;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    z-index: 10;
+    width: 30%;
+    background-color: #fff;
+    color: #000;
+  }
+
+  #navbar a {
+      display: block;
+  }
+
+  #container {
+    /*background: black;*/
+    color: white;
+  }
+
+  body {
+    background-color: white;
+  }
+}
+
+@media screen and (min-width: 750px) {
+  #main-content {
+    float: left;
+    width: 70%;
+    height: 100vh;
+  }
+
+  #column1 {
+    float: right;
+    width: 29%;
+    height: 49%;
+    margin-top: 0;
+  }
+
+  #column2 {
+    float: right;
+    width: 29%;
+    height: 50%;
+  }
+  header {
+    width: 250px;
+  }
+
+  #main-content h3 {
+    position: absolute;
+    top: 88%;
+    left: 5%;
+  }
+
+  #icon {
+    display: block;
+  }
+
+  #icon img {
+    height: 80px;
+    width: 80px;
+  }
+}
